@@ -1,0 +1,19 @@
+{
+  "number": 0,
+  "title": "HTML Skeleton",
+  "branch": "main",
+  "tag": "v0-html-skeleton",
+  "previous": null,
+  "concept": "basic HTML document structure",
+  "summary": "Create index.html with doctype, head, and body.",
+  "stack": {
+    "frontend": {
+      "html": "5",
+      "css": "3"
+    },
+    "tools": {
+      "browser": "any modern browser",
+      "editor": "any text editor"
+    }
+  }
+}
