@@ -1,24 +1,61 @@
-# Walkthrough -- Stage 1: Header & Intro
+# Walkthrough -- Stage 2: Semantic Sections
 
 > Open `index.html` side by side with this walkthrough. Read the code first, then read the explanation.
 
-## File: [`index.html`](https://github.com/vedanta/burger-barn/blob/feature/01-header-intro/index.html)
+## File: [`index.html`](https://github.com/vedanta/burger-barn/blob/feature/02-semantic-sections/index.html)
 
-### Lines 8--10: Body content
+### Lines 8--11: The header
 
 ```html
-<body>
-  <h1>Burger Barn</h1>
-  <p>Handcrafted burgers, made fresh daily.</p>
-</body>
+  <header>
+    <h1>Burger Barn</h1>
+    <p>Handcrafted burgers, made fresh daily.</p>
+  </header>
 ```
 
 **What's happening:**
 
-In Stage 0, the `<body>` was empty. Now it has two elements.
+The `<header>` element wraps introductory content for the page. In Stage 1, the `<h1>` and `<p>` sat directly inside `<body>`. Now they are grouped inside `<header>`, which tells browsers and screen readers "this is the introductory section of the page."
 
-The `<h1>` tag creates a level-1 heading -- the most important heading on the page. Browsers display it in large, bold text by default. HTML has six heading levels, `<h1>` through `<h6>`, where `<h1>` is the most important and `<h6>` is the smallest. A page should have exactly one `<h1>` that describes what the page is about.
+The `<header>` element does not change how the page looks. Visually, the heading and tagline appear exactly as before. The difference is in the HTML structure -- the content now has meaning attached to it.
 
-The `<p>` tag creates a paragraph. It is the basic element for body text. Browsers add a small gap above and below each paragraph automatically.
+### Lines 13--25: Main content with sections
 
-Both elements are indented with 2 spaces inside `<body>`. This indentation is optional -- the browser ignores it -- but it makes the HTML easier to read because you can see which elements are inside which.
+```html
+  <main>
+    <section>
+      <h2>Classic Burgers</h2>
+    </section>
+
+    <section>
+      <h2>Specialty Burgers</h2>
+    </section>
+
+    <section>
+      <h2>Sides</h2>
+    </section>
+  </main>
+```
+
+**What's happening:**
+
+The `<main>` element marks the primary content of the page. A page should have only one `<main>` element. It tells screen readers "skip the header and navigation -- this is the core content."
+
+Inside `<main>`, three `<section>` elements divide the content into menu categories. Each `<section>` starts with an `<h2>` heading. The `<h2>` is a level-2 heading -- it is a sub-topic under the `<h1>`. This creates a heading hierarchy:
+
+- `<h1>` Burger Barn (the page topic)
+  - `<h2>` Classic Burgers (a sub-topic)
+  - `<h2>` Specialty Burgers (a sub-topic)
+  - `<h2>` Sides (a sub-topic)
+
+Each section is empty for now -- just a heading. In Stage 3, you will add menu items inside these sections.
+
+### Why semantic elements matter
+
+You could use `<div>` instead of `<header>`, `<main>`, and `<section>`. The page would look identical. But semantic elements carry meaning:
+
+- Screen readers announce "main content" when they reach `<main>`, helping visually impaired users skip to what matters.
+- Search engines understand the page structure better.
+- Other developers reading your code immediately know what each section is for.
+
+Semantic HTML is about writing HTML that describes what things *are*, not just how they look.

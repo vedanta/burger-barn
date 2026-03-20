@@ -1,35 +1,45 @@
-# Troubleshooting -- Stage 1: Header & Intro
+# Troubleshooting -- Stage 2: Semantic Sections
 
 ## Common Errors
 
-### Nothing shows up on the page
+### The page looks exactly the same as Stage 1
 
-**Cause:** The heading and paragraph might be outside the `<body>` tags, or there is a typo in the tag names.
+**Cause:** This is expected if you only added the semantic wrapper elements without the `<h2>` headings. Semantic elements like `<header>`, `<main>`, and `<section>` do not change the visual appearance on their own.
 
-**Fix:** Make sure `<h1>` and `<p>` are between `<body>` and `</body>`. Check for typos like `<h1>` missing the closing `>`.
+**Fix:** Make sure each `<section>` contains an `<h2>` heading (e.g., `<h2>Classic Burgers</h2>`). The `<h2>` headings are the new visible content in this stage.
 
-### The heading and paragraph run together on one line
+### The section headings appear the same size as the main heading
 
-**Cause:** You may have used `<span>` instead of `<h1>` or `<p>`. Span is an inline element that does not start a new line.
+**Cause:** You may have used `<h1>` instead of `<h2>` for the section headings.
 
-**Fix:** Use `<h1>` for the heading and `<p>` for the paragraph. These are block elements that each take their own line.
+**Fix:** Use `<h2>` for section headings. The `<h1>` is reserved for the page title ("Burger Barn"). Section headings should use `<h2>` to maintain the correct heading hierarchy.
 
-### The text appears but looks like code (angle brackets visible)
+### Content appears outside the sections in the Elements tab
 
-**Cause:** The file might be saved with a `.txt` extension instead of `.html`, or the tags have a typo.
+**Cause:** A tag might not be closed properly, or the indentation is misleading.
 
-**Fix:** Make sure the file is named `index.html` (not `index.html.txt`). Check that every `<` has a matching `>`.
+**Fix:** Check that every opening tag has a matching closing tag. For example, `<section>` must have `</section>`, and `<main>` must have `</main>`. Use the Elements tab in developer tools to see the actual structure the browser parsed.
+
+### The header content disappeared
+
+**Cause:** The `<header>` closing tag might be in the wrong place, or the `<h1>` and `<p>` were accidentally deleted when wrapping them.
+
+**Fix:** Make sure `<h1>` and `<p>` are between `<header>` and `</header>`. The content from Stage 1 should still be there, just wrapped in the new element.
 
 ## FAQ
 
-### Why use `<h1>` instead of just making text bold?
+### What is the difference between `<div>` and `<section>`?
 
-Headings are not just about size. Screen readers use heading levels to help visually impaired users navigate the page. Search engines use them to understand what the page is about. Always use heading elements for headings, not bold or large text.
+Both are container elements that group other elements. The difference is meaning. A `<div>` is a generic container with no semantic meaning. A `<section>` tells browsers and screen readers "this is a thematic grouping of content." Use `<section>` when the content forms a logical group with a heading.
 
-### Can I have more than one `<h1>` on a page?
+### Can I use `<main>` more than once?
 
-Technically yes, but it is best practice to have exactly one `<h1>` per page. It should describe the main topic. Use `<h2>` through `<h6>` for sub-sections.
+No. A page should have only one `<main>` element. It represents the dominant content of the page. If you have content that repeats across pages (like a sidebar or navigation), that belongs outside `<main>`.
 
-### Why does the browser add space between the heading and paragraph?
+### Do I need to use `<header>` for the page header?
 
-Browsers apply default styles to HTML elements. Headings and paragraphs both have built-in margin (space around them). You will learn to control this with CSS in a later stage.
+It is not strictly required, but it is best practice. The `<header>` element helps screen readers and search engines identify introductory content. It also makes your HTML self-documenting -- anyone reading the code can instantly see where the header content is.
+
+### Why are the sections empty except for headings?
+
+Each stage introduces one concept. This stage focuses on semantic structure. You will add menu items inside these sections in Stage 3.

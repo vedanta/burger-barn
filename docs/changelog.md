@@ -1,15 +1,15 @@
-# Changelog -- Stage 1: Header & Intro
+# Changelog -- Stage 2: Semantic Sections
 
 ## Previous Stage
 
-Stage 0: HTML Skeleton (branch: `main`)
+Stage 1: Header & Intro (branch: `feature/01-header-intro`)
 
 ## Files Changed
 
 | File | Change | What and Why |
 |------|--------|--------------|
-| `index.html` | modified | Added an `<h1>` heading and a `<p>` paragraph inside the body |
+| `index.html` | modified | Wrapped heading and tagline in `<header>`, added `<main>` with three `<section>` elements for menu categories |
 
 ## Summary
 
-The empty body from Stage 0 now has two elements: a heading with the restaurant name and a paragraph with a tagline. This is the simplest way to put visible content on an HTML page.
+The flat list of elements from Stage 1 is now organized into semantic containers. A `<header>` wraps the restaurant name and tagline. A `<main>` element holds the primary content area, which contains three `<section>` elements -- one for each menu category. The page looks almost the same in the browser, but the HTML now communicates the purpose of each part.

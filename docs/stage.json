@@ -1,11 +1,11 @@
 {
-  "number": 1,
-  "title": "Header & Intro",
-  "branch": "feature/01-header-intro",
-  "tag": "v1-header-intro",
-  "previous": "main",
-  "concept": "headings and paragraphs",
-  "summary": "Add the restaurant name and tagline.",
+  "number": 2,
+  "title": "Semantic Sections",
+  "branch": "feature/02-semantic-sections",
+  "tag": "v2-semantic-sections",
+  "previous": "feature/01-header-intro",
+  "concept": "semantic HTML elements",
+  "summary": "Wrap content in main and section elements.",
   "stack": {
     "frontend": {
       "html": "5",
