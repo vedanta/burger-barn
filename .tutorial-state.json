@@ -1,8 +1,8 @@
 {
   "stages": {
     "0": "deployed",
-    "1": "built",
-    "2": "pending",
+    "1": "deployed",
+    "2": "deployed",
     "3": "pending",
     "4": "pending",
     "5": "pending",
