@@ -1,15 +1,15 @@
-# Changelog -- Stage 0: HTML Skeleton
+# Changelog -- Stage 1: Header & Intro
 
 ## Previous Stage
 
-None. This is the first stage.
+Stage 0: HTML Skeleton (branch: `main`)
 
 ## Files Changed
 
 | File | Change | What and Why |
 |------|--------|--------------|
-| `index.html` | added | The HTML5 skeleton with doctype, head, and empty body. This is the minimal valid HTML page. |
+| `index.html` | modified | Added an `<h1>` heading and a `<p>` paragraph inside the body |
 
 ## Summary
 
-This stage creates the project's only source file: `index.html`. It establishes the HTML5 document structure that every future stage builds on. The page is intentionally blank -- the focus is on understanding the required structure, not on visible content.
+The empty body from Stage 0 now has two elements: a heading with the restaurant name and a paragraph with a tagline. This is the simplest way to put visible content on an HTML page.

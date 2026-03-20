@@ -1,56 +1,44 @@
-# Exercises -- Stage 0: HTML Skeleton
+# Exercises -- Stage 1: Header & Intro
 
-## Exercise 1: Change the page title
+## Exercise 1: Change the heading text
 
-**Goal:** See how the `title` element affects the browser tab.
-
-**Steps:**
-1. Open `index.html` in your editor
-2. Change `Burger Barn` inside the `<title>` tags to `My Restaurant`
-3. Save the file and refresh the browser
-
-**What happened:** The browser tab now says "My Restaurant" instead of "Burger Barn." The `title` element controls the text in the tab, bookmarks, and search engine results. Change it back to `Burger Barn` when you are done.
-
-## Exercise 2: Remove the doctype
-
-**Goal:** Understand why the doctype matters.
+**Goal:** See that the `<h1>` content is what appears as the heading in the browser.
 
 **Steps:**
-1. Delete the first line (`<!DOCTYPE html>`) from `index.html`
-2. Save and open the file in your browser
-3. Right-click the page, choose "Inspect", and look at the Console tab for any warnings
-4. Add the doctype back
+1. Change the text inside `<h1>` to your own name, like `<h1>My Restaurant</h1>`
+2. Save the file and refresh the browser
 
-**What happened:** The page might look the same for now (it is blank either way), but the browser switches to "quirks mode" without the doctype. Quirks mode uses older, inconsistent rendering rules. You can check which mode the browser is in by typing `document.compatMode` in the console -- "CSS1Compat" means standards mode, "BackCompat" means quirks mode.
+**What happened:** The heading on the page changed to whatever you typed between the opening `<h1>` and closing `</h1>` tags. The text between an opening and closing tag is called the element's content.
 
-## Exercise 3: Add text to the body
+## Exercise 2: Try different heading levels
 
-**Goal:** Confirm that the body is where visible content goes.
+**Goal:** Understand how heading levels affect size and importance.
 
 **Steps:**
-1. Between the `<body>` and `</body>` tags, type: `Hello, world!`
-2. Save and refresh the browser
+1. Change `<h1>Burger Barn</h1>` to `<h2>Burger Barn</h2>`
+2. Save and refresh. Notice the text got smaller.
+3. Try `<h3>`, `<h4>`, `<h5>`, and `<h6>` -- each one is smaller than the last.
+4. Change it back to `<h1>` when done.
 
-**What happened:** You see "Hello, world!" on the page. Anything inside the `body` element becomes visible content. Remove the text before moving to the next stage -- Stage 1 will add the real content.
+**What happened:** HTML has six heading levels. `<h1>` is the largest and most important, `<h6>` is the smallest. These levels tell browsers and screen readers about the structure of your content.
 
-## Exercise 4: Break a tag on purpose
+## Exercise 3: Add a second paragraph
 
-**Goal:** See how the browser handles invalid HTML.
-
-**Steps:**
-1. Change `</head>` to `</hed>` (a typo)
-2. Save and refresh the browser
-3. Right-click, Inspect, and look at the Elements tab
-
-**What happened:** The browser still renders the page. Browsers are forgiving -- they try to fix broken HTML silently. But the Elements tab may show an unexpected structure. Always close your tags correctly so the browser interprets your intent. Fix the typo before continuing.
-
-## Exercise 5: Change the language
-
-**Goal:** See what the `lang` attribute does.
+**Goal:** See how browsers stack block elements vertically.
 
 **Steps:**
-1. Change `lang="en"` to `lang="fr"` on the `<html>` tag
-2. Save and refresh the browser
-3. If you have browser translation features enabled, notice whether the browser now thinks the page is in French
+1. Add a second `<p>` tag below the first one: `<p>Open seven days a week.</p>`
+2. Save and refresh
 
-**What happened:** The `lang` attribute does not change how the page looks, but it tells the browser and assistive tools what language the content is in. Screen readers use this to choose the correct pronunciation. Change it back to `lang="en"`.
+**What happened:** The new paragraph appears below the first one. Block elements like `<p>` stack vertically -- each one starts on a new line. The browser adds automatic spacing between them.
+
+## Exercise 4: Remove the closing tag
+
+**Goal:** Understand why closing tags matter.
+
+**Steps:**
+1. Delete `</h1>` from the heading line so it reads `<h1>Burger Barn`
+2. Save and refresh. Look at what happened to the paragraph text.
+3. Add `</h1>` back to fix it.
+
+**What happened:** Without the closing tag, the browser treats everything after `<h1>` as part of the heading. The paragraph text appeared large and bold because the browser thought it was still inside the heading element. Always close your tags.

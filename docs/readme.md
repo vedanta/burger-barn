@@ -1,21 +1,21 @@
-# Stage 0 -- HTML Skeleton
+# Stage 1 -- Header & Intro
 
-> Create the minimal HTML page that everything else builds on.
+> Add the restaurant name and a tagline so the page has visible content for the first time.
 
 ## What You'll Learn
 
-- The HTML5 doctype declaration
-- The `html`, `head`, and `body` elements that every HTML page needs
-- How to set the page title and character encoding
+- How to add a heading with `<h1>`
+- How to add a paragraph with `<p>`
+- How heading levels communicate importance
 
 ## Prerequisites
 
-None. This is the starting point.
+Complete [Stage 0 -- HTML Skeleton](/stage-00/). You should have a valid `index.html` with doctype, head, and body.
 
 ## What Changes
 
-A single file is added: `index.html`. It contains the bare HTML5 skeleton -- doctype, head with metadata, and an empty body.
+One file is modified: `index.html`. Two elements are added inside the `<body>` -- a heading for the restaurant name and a paragraph for the tagline.
 
 ## Outcome
 
-Open `index.html` in your browser. You see a blank page with "Burger Barn" in the browser tab. That blank page is a valid HTML document -- the scaffold everything else builds on.
+Open `index.html` in your browser. You see "Burger Barn" as a large heading and "Handcrafted burgers, made fresh daily." as text below it. The page now has visible content.

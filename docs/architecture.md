@@ -1,24 +1,22 @@
-# Architecture -- Stage 0: HTML Skeleton
+# Architecture -- Stage 1: Header & Intro
 
 ## Current Structure
 
 ```
 burger-barn/
-  index.html
+  index.html       <- the webpage (modified)
 ```
-
-That is the entire project at this stage: a single HTML file.
 
 ## Data Flow
 
-There is no data flow yet. The browser reads `index.html`, parses the HTML, and renders a blank page with a title in the tab.
+The browser reads `index.html`, parses the HTML, and renders the heading and paragraph on screen.
 
 ```mermaid
 graph LR
     A[index.html] --> B[Browser]
-    B --> C[Blank page with title in tab]
+    B --> C[Page with heading and tagline]
 ```
 
 ## What Changed
 
-This is the first stage. The project structure is established with one file: `index.html`. Every future stage adds to or modifies files starting from this foundation.
+No structural changes. The project still has a single HTML file. The only change is new content inside the `<body>` element: an `<h1>` heading and a `<p>` paragraph.

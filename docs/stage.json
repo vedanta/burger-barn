@@ -1,11 +1,11 @@
 {
-  "number": 0,
-  "title": "HTML Skeleton",
-  "branch": "main",
-  "tag": "v0-html-skeleton",
-  "previous": null,
-  "concept": "basic HTML document structure",
-  "summary": "Create index.html with doctype, head, and body.",
+  "number": 1,
+  "title": "Header & Intro",
+  "branch": "feature/01-header-intro",
+  "tag": "v1-header-intro",
+  "previous": "main",
+  "concept": "headings and paragraphs",
+  "summary": "Add the restaurant name and tagline.",
   "stack": {
     "frontend": {
       "html": "5",

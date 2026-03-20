@@ -1,64 +1,24 @@
-# Walkthrough -- Stage 0: HTML Skeleton
+# Walkthrough -- Stage 1: Header & Intro
 
 > Open `index.html` side by side with this walkthrough. Read the code first, then read the explanation.
 
-## File: [`index.html`](https://github.com/vedanta/burger-barn/blob/main/index.html)
+## File: [`index.html`](https://github.com/vedanta/burger-barn/blob/feature/01-header-intro/index.html)
 
-### Line 1: The doctype
-
-```html
-<!DOCTYPE html>
-```
-
-**What's happening:**
-
-This tells the browser "this is an HTML5 document." Without it, browsers fall back to older rendering modes that behave unpredictably. Every HTML page starts with this line.
-
-### Line 2: The html element
-
-```html
-<html lang="en">
-```
-
-**What's happening:**
-
-The `html` element wraps everything on the page. The `lang="en"` attribute tells browsers and screen readers that the page content is in English. This helps with accessibility and search engines.
-
-### Lines 3--7: The head
-
-```html
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Burger Barn</title>
-</head>
-```
-
-**What's happening:**
-
-The `head` contains information *about* the page -- it does not appear on screen.
-
-- `charset="UTF-8"` tells the browser how to decode the text. UTF-8 supports virtually every character and language.
-- The `viewport` meta tag makes the page display correctly on phones and tablets. Without it, mobile browsers zoom out and the page looks tiny.
-- `title` sets the text that appears in the browser tab. This is the only visible result of Stage 0.
-
-### Lines 8--9: The body
+### Lines 8--10: Body content
 
 ```html
 <body>
+  <h1>Burger Barn</h1>
+  <p>Handcrafted burgers, made fresh daily.</p>
 </body>
 ```
 
 **What's happening:**
 
-The `body` is where all visible content goes -- text, images, links, everything you see on a webpage. Right now it is empty, so the page is blank. In the next stage, you will add the restaurant name and tagline here.
+In Stage 0, the `<body>` was empty. Now it has two elements.
 
-### Line 10: Closing the html element
+The `<h1>` tag creates a level-1 heading -- the most important heading on the page. Browsers display it in large, bold text by default. HTML has six heading levels, `<h1>` through `<h6>`, where `<h1>` is the most important and `<h6>` is the smallest. A page should have exactly one `<h1>` that describes what the page is about.
 
-```html
-</html>
-```
+The `<p>` tag creates a paragraph. It is the basic element for body text. Browsers add a small gap above and below each paragraph automatically.
 
-**What's happening:**
-
-This closes the `html` element that you opened on line 2. Every opening tag needs a matching closing tag.
+Both elements are indented with 2 spaces inside `<body>`. This indentation is optional -- the browser ignores it -- but it makes the HTML easier to read because you can see which elements are inside which.
