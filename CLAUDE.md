@@ -2,42 +2,61 @@
 
 ## Project Overview
 
-LearnGen is a GitHub template for building staged tutorial projects with AI agents. Users clone this template, run `@tutorial-init` to set up their tutorial, then run `@tutorial-turbo` to build stages one at a time.
-
-**This file serves two purposes:**
-1. When developing LearnGen itself — tells agents how this repo works
-2. When cloned as a template — gets replaced by `@tutorial-init` with project-specific coding standards
+Burger Barn is a staged tutorial that teaches HTML and CSS by building a restaurant menu webpage from scratch. Each stage introduces one concept, and the learner always has a working page they can open in a browser.
 
 ## Architecture
 
-- **`.claude/agents/`** — 7 AI agents that power the pipeline (init, turbo, coder, reviewer, docs-turbo, docs-deploy, docs-stage-prep)
-- **`docs/TEACHING.md`** — Universal teaching principles (simplicity, one concept per stage, naming)
-- **`docs/STANDARD.md`** — 8-file documentation standard per stage
-- **`docs/ROADMAP.md`** — Placeholder for the tutorial roadmap (YAML frontmatter + markdown)
-- **`docs/LEARNGEN.md`** — Full design document
-- **`docs-site/`** — VitePress scaffold (placeholder pages, theme, mermaid plugin)
-- **`.github/workflows/deploy-docs.yml`** — GitHub Pages auto-deploy
+This is a static site — no build tools, no frameworks, no server.
 
-## Key Files
+```
+burger-barn/
+├── index.html       ← the webpage
+├── styles.css       ← stylesheet (added in stage 5)
+├── docs/            ← tutorial documentation per stage
+└── docs-site/       ← VitePress documentation site
+```
 
-| File | Role |
-|------|------|
-| `docs/TEACHING.md` | Teaching philosophy — all agents read this |
-| `docs/STANDARD.md` | Doc structure — defines the 8 files per stage |
-| `docs/ROADMAP.md` | Placeholder — `tutorial-init` generates the real one |
-| `docs/LEARNGEN.md` | Design doc — explains the full system |
+## Tech Stack
 
-## When Developing LearnGen
+| Layer    | Technology |
+|----------|-----------|
+| Markup   | HTML5     |
+| Styling  | CSS3      |
+| Tools    | Any text editor + any modern browser |
 
-- Agent prompts must be **stack-agnostic** — they read coding rules from `CLAUDE.md` (generated per-project), not hardcoded
-- All teaching principles go in `TEACHING.md`, not scattered across agent prompts
-- Test changes against the Fortune App (the reference implementation at `vedanta/fortune-app`)
-- The Fortune App repo has LearnGen as a submodule — develop there, sync here
+## Development
 
-## When Cloned as a Template
+Open `index.html` in a browser. No build step, no server, no dependencies.
 
-`@tutorial-init` replaces this file with project-specific content:
-- Project overview and architecture
-- Tech stack details
-- Development commands
-- Coding standards for the chosen stack
+To use a live-reload server (optional):
+
+```bash
+make dev
+```
+
+## Coding Standards
+
+### HTML
+- Use the HTML5 doctype: `<!DOCTYPE html>`
+- Always include `<html lang="en">`, `<head>` with charset and viewport, and `<body>`
+- Use semantic elements: `<main>`, `<section>`, `<header>`, `<footer>`, `<nav>` — not just `<div>`
+- Use descriptive class names: `menu-item`, `item-price` — not `box1`, `text2`
+- Indent nested elements with 2 spaces
+- Always close tags — no self-closing shortcuts for non-void elements
+- One element per line for readability
+
+### CSS
+- Use a separate `styles.css` file linked in `<head>` — no inline styles, no `<style>` tags
+- Use class selectors (`.menu-item`) over element selectors (`div`) for styling
+- Group related properties together (layout, then box model, then typography, then visual)
+- Use `rem` for font sizes, `px` for borders and shadows
+- Keep selectors flat — avoid nesting deeper than one level (`.menu-item .price` is fine, deeper is not)
+- Use CSS custom properties (variables) only if explicitly introduced in a stage
+- Mobile-first is not required — desktop-first with a max-width media query is fine for this tutorial
+
+### General
+- No JavaScript — this is an HTML & CSS only tutorial
+- No external libraries, CDNs, or frameworks
+- No build tools — the browser reads the files directly
+- Keep file count minimal — one HTML file, one CSS file
+- Every stage must produce a page that opens correctly in a browser

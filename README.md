@@ -1,56 +1,55 @@
-# LearnGen
+# Burger Barn 🍔
 
-A GitHub template for building staged tutorial projects with AI agents.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![Stages](https://img.shields.io/badge/stages-1%2F10-f59e0b)
 
-**Turn a tutorial idea into a complete learning site — one command at a time.**
+A staged tutorial that teaches HTML and CSS by building a restaurant menu webpage from scratch.
+
+## What You'll Build
+
+A complete, responsive restaurant menu page — from an empty HTML file to a polished, mobile-friendly design with hover effects and flexbox layout.
+
+## How This Tutorial Works
+
+Each stage lives on its own Git branch. Every stage introduces **one concept** and always leaves you with a working page.
+
+| Stage | Branch | Concept |
+|-------|--------|---------|
+| 0 | `main` | HTML skeleton |
+| 1 | `feature/01-header-intro` | Headings & paragraphs |
+| 2 | `feature/02-semantic-sections` | Semantic HTML |
+| 3 | `feature/03-menu-items` | Reusable HTML patterns |
+| 4 | `feature/04-footer` | Page completion |
+| 5 | `feature/05-basic-css` | CSS fundamentals |
+| 6 | `feature/06-spacing` | Box model |
+| 7 | `feature/07-menu-cards` | CSS visual components |
+| 8 | `feature/08-flexbox-layout` | Flexbox basics |
+| 9 | `feature/09-polish-responsive` | Hover & responsive |
 
 ## Quick Start
 
 ```bash
-# 1. Create your tutorial repo from this template
-gh repo create my-tutorial --template vedanta/learngen --public --clone
-cd my-tutorial
+# Clone the repo
+git clone https://github.com/vedanta/burger-barn.git
+cd burger-barn
 
-# 2. Initialize (interactive 5-round flow)
-# @tutorial-init "Build a URL shortener with Go and SQLite"
+# Open in your browser
+open index.html
 
-# 3. Install docs dependencies
-cd docs-site && npm install && cd ..
-
-# 4. Enable GitHub Pages
-gh api repos/<user>/<repo>/pages -X POST -f build_type=workflow
-
-# 5. Build stages one at a time
-# @tutorial-turbo           # builds + deploys next stage
-# @tutorial-turbo --status  # check progress
+# Jump to any stage
+git checkout feature/05-basic-css
 ```
 
-## What It Does
+## Prerequisites
 
-1. **`@tutorial-init`** — Asks 5 rounds of questions, generates a structured roadmap and scaffolds the entire project
-2. **`@tutorial-turbo`** — Reads the roadmap, builds one stage (code + 8 doc files), deploys to the docs site
-3. **Repeat** until all stages are deployed
-
-## What You Get
-
-- Branch-per-stage tutorial with working code at every stage
-- VitePress docs site with dark mode, mermaid diagrams, collapsible sidebar
-- Landing page with grouped stage cards and progress indicators
-- 8 documentation files per stage (overview, changelog, steps, walkthrough, architecture, exercises, troubleshooting)
-- GitHub Actions auto-deployment to GitHub Pages
-- Pipeline state tracking for resumable builds
+- A text editor (VS Code, Sublime, or even Notepad)
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- No prior coding experience required
 
 ## Documentation
 
-See [docs/LEARNGEN.md](docs/LEARNGEN.md) for the full design document.
-
-## Reference Implementation
-
-The [Fortune App](https://github.com/vedanta/fortune-app) tutorial was built with this pattern.
-
-## Authors
-
-Vedanta
+Full walkthrough, exercises, and architecture docs for each stage are in `docs/` and on the [tutorial site](https://vedanta.github.io/burger-barn/).
 
 ## License
 

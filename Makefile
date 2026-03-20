@@ -1,12 +1,17 @@
-# This is a placeholder Makefile.
-# @tutorial-init will replace this with stack-specific dev commands.
+.PHONY: dev docs docs-build docs-preview
 
-.PHONY: docs docs-build
+# Open index.html with a live-reload server (requires npx)
+dev:
+	npx live-server --port=3000 --no-browser .
 
-# Start docs dev server
+# Run the VitePress docs site locally
 docs:
 	cd docs-site && npm run docs:dev
 
-# Build docs for production
+# Build the docs site for production
 docs-build:
 	cd docs-site && npm run docs:build
+
+# Preview the production docs build
+docs-preview:
+	cd docs-site && npm run docs:preview

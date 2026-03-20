@@ -1,5 +1,4 @@
-/* Default accent: amber. @tutorial-init will update based on chosen accent. */
-/* Presets: amber (#f59e0b), blue (#3b82f6), green (#10b981), purple (#8b5cf6), rose (#f43f5e) */
+/* Accent: amber (#f59e0b) */
 
 :root {
   --vp-c-brand-1: #d97706;
