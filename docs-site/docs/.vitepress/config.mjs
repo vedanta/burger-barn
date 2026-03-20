@@ -45,6 +45,12 @@ export default withMermaid({
         collapsed: true,
         items: [
           { text: 'Overview', link: '/stage-02/' },
+          { text: 'Changelog', link: '/stage-02/changelog' },
+          { text: 'Steps', link: '/stage-02/steps' },
+          { text: 'Walkthrough', link: '/stage-02/walkthrough' },
+          { text: 'Architecture', link: '/stage-02/architecture' },
+          { text: 'Exercises', link: '/stage-02/exercises' },
+          { text: 'Troubleshooting', link: '/stage-02/troubleshooting' },
         ],
       },
       {

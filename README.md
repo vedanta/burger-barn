@@ -2,7 +2,7 @@
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![Stages](https://img.shields.io/badge/stages-2%2F10-f59e0b)
+![Stages](https://img.shields.io/badge/stages-3%2F10-f59e0b)
 
 A staged tutorial that teaches HTML and CSS by building a restaurant menu webpage from scratch.
 
