@@ -25,7 +25,7 @@ Build the bare HTML structure — a valid page with semantic elements.
 | # | Stage | Branch | Concept |
 |---|-------|--------|---------|
 | 0 | [HTML Skeleton](/stage-00/) | `main` | Basic HTML document structure |
-| 1 | Header & Intro | `feature/01-header-intro` | Headings and paragraphs |
+| 1 | [Header & Intro](/stage-01/) | `feature/01-header-intro` | Headings and paragraphs |
 | 2 | Semantic Sections | `feature/02-semantic-sections` | Semantic HTML elements |
 
 ### 🍔 Content

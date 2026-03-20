@@ -55,7 +55,7 @@ graph LR
 | Stage | Concept | Status |
 |-------|---------|--------|
 | [0 -- HTML Skeleton](/stage-00/) | Basic HTML document structure | Available |
-| 1 — Header & Intro | Headings and paragraphs | -- |
+| [1 -- Header & Intro](/stage-01/) | Headings and paragraphs | Available |
 | 2 — Semantic Sections | Semantic HTML elements | -- |
 
 ### 🍔 Content
